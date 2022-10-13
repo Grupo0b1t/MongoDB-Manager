@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Inserindo no Banco de Dados</title>
+    </head>
+    <body>
+        Gerencie o Banco de Dados por meio da interface web!
+    <br /><br />  
+        <div>
+
+            <form method="get">
+                Adicione Músicas no Banco de Dados
+                <br /><br />
+                Nome da Música:
+                <input type="text" name="musica">
+                <br /><br />
+                Nome da Banda ou Cantor:
+                <input type="text" name="bandaoucantor">
+                <br /><br />
+                Ano da Música:
+                <input type="text" name="ano">
+                <br /><br />
+                Categoria da Música:
+                <input type="text" name="categoria">
+                <br /><br />
+                <input type="submit" value="criar">
+
+            </form>
+
+
+
+            <form method="get">
+                Altere Músicas no Banco de Dados
+                <br /><br />
+                Nome da Música:
+                <input type="text" name="altmusica">
+                Nome Novo da Música:
+                <input type="text" name="altnovomusica">
+                <br /><br />
+                Nome da Banda ou Cantor:
+                <input type="text" name="altbandaoucantor">
+                Nome Novo da Banda ou Cantor:
+                <input type="text" name="altnovobandaoucantor">
+                <br /><br />
+                Ano da Música:
+                <input type="text" name="altano">
+                Novo Ano da Música:
+                <input type="text" name="altnovoano">
+                <br /><br />
+                Categoria da Música:
+                <input type="text" name="altcategoria">
+                Nova Categoria da Música:
+                <input type="text" name="altnovocategoria">
+                <br /><br />
+                <input type="submit" value="alterar">
+                <br />
+                {% if resultadoalt %}
+                <div>
+                    {{resultadoalt}}!!!
+                </div>
+                {% endif %}
+                <br />
+            </form>
+
+
+            <form method="get">
+                Delete Músicas no Banco de Dados
+                <br /><br />
+                Nome da Música:
+                <input type="text" name="delmusica">
+                <br /><br />
+                Nome da Banda ou Cantor:
+                <input type="text" name="delbandaoucantor">
+                <br /><br />
+                Ano da Música:
+                <input type="text" name="delano">
+                <br /><br />
+                Categoria da Música:
+                <input type="text" name="delcategoria">
+                <br /><br />
+                <input type="submit" value="deletar">
+                <br />
+                {% if resultadodel %}
+                <div>
+                    {{resultadodel}}!!!
+                </div>
+                {% endif %}
+                <br />
+            </form>
+
+
+            <form method="get">
+                Liste as databases
+                <br/><br />
+                <input type="submit" name="listardatabases">
+                </div>
+                <br />
+                {% if resultadodatabases %}
+                <div>
+                    Databases Disponíveis: {{databaseslistados}}!!!
+                </div>
+                {% endif %}
+                <br />
+            </form>
+
+            <form method="get">
+                <br />
+                Liste as Collections e o seu Conteúdo
+                <br/><br />
+                <input type="submit" name="listarcontainers">
+                </div>
+                <br />
+                {% if resultadocontainers %}
+                <div>
+                    <br/>
+                    <br/>
+                    Collections e Conteúdo: {{containerslistados}}!!!
+                </div>
+                {% endif %}
+            </form>
+
+
+
+        </div>
+        <br />
+
+    </body>
+</html>
